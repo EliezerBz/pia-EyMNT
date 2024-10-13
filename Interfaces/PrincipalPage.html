@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecointercambios</title>
+    <link rel="stylesheet" href="../Assets/CSS/StylePrincipal.css">
+</head>
+<body>
+
+    <header>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            &#9776;
+        </button>
+        <a href="#" class="logoytitulo">
+            <img src="../Assets/Img/Logo_transparent-removebg-preview-removebg-preview.png" alt="Logo de Ecointercambios">
+            <h4>Ecointercambios</h4>
+        </a>
+        <nav class="nav-menu">
+            <a href="">Donaciones</a>
+            <a href="">Intercambios</a>
+            <a href="">Compra / Venta</a>
+            <a href="">Perfil</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Explora categorías para intercambiar</h2>
+
+        <div class="container-padre">
+            <div class="container-gen">
+                <h3>Electrónica</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvQk6XOjULg-bVbrOMiHxMdIQ2Ch1pXgnbYA&s" alt="Electrónica">
+                <button>Ver Artículos</button>
+            </div>
+
+            <div class="container-gen">
+                <h3>Juguetes</h3>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_770491-MLM46221364790_052021-O.webp" alt="Juguetes">
+                <button>Ver Artículos</button>
+            </div>
+
+            <div class="container-gen">
+                <h3>Ropa</h3>
+                <img src="https://theonesupplements.com/wp-content/uploads/2022/08/NP.png" alt="Ropa">
+                <button>Ver Artículos</button>
+            </div>
+
+            <div class="container-gen">
+                <h3>Electrodomésticos</h3>
+                <img src="https://bomssa.com/cdn/shop/products/Disenosintitulo_68.png?crop=center&height=1080&v=1644361994&width=1080" alt="Electrodomésticos">
+                <button>Ver Artículos</button>
+            </div>
+
+            <div class="container-gen">
+                <h3>Aire Libre</h3>
+                <img src="https://cantia.com.mx/cdn/shop/products/A15004.png?v=1661899383" alt="Aire Libre">
+                <button>Ver Artículos</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <img src="https://cdn-icons-png.flaticon.com/512/10710/10710939.png" alt="Logo Oficial" class="footer-logo">
+                <h3>Plataforma de Donaciones, Intercambio y Ventas.</h3>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#">Ubicaciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Sobre Nosotros</h4>
+                <ul>
+                    <li><a href="#">Misión y Visión</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Síguenos en</h4>
+                <div class="social-links">
+                    <a href="#"><img src="https://www.svgrepo.com/show/506656/facebook.svg" alt="Facebook" class="social-icon"></a>
+                    <a href="#"><img src="https://www.svgrepo.com/show/521711/instagram.svg" alt="Instagram" class="social-icon"></a>
+                    <a href="#"><img src="https://www.svgrepo.com/show/505028/twitter.svg" alt="Twitter" class="social-icon"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Plataforma de Donaciones, Intercambio y Ventas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+    
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+            menuToggle.classList.toggle('open'); 
+            if (menuToggle.classList.contains('open')) {
+                menuToggle.innerHTML = '&times;';
+            } else {
+                menuToggle.innerHTML = '&#9776;';
+            }
+        });
+    </script>
+
+</body>
+</html>
