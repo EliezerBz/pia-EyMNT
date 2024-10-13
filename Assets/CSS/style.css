@@ -1,3 +1,42 @@
+/*Contenido Principal*/
+.containerPadre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #28a745;
+    padding: 50px;
+}
+.containerInfo {
+    flex: 1;
+    color: white;
+    padding: 20px;
+}
+
+.containerInfo h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.containerImg {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerImg img {
+    width: 200px;
+}
+
+.containerPadre2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #28a745;
+    padding: 50px;
+}
+/*Fin Contenido Principal*/
+
 body, html {
     height: 100%;
     margin: 0;
