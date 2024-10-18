@@ -148,6 +148,10 @@ body{
   background-color: #a7a7a7;
 }
 
+.hide{
+  position: absolute;
+  transform: translateY(-300%)
+}
 /*SECCION DE RESPONSIVE*/
 
 @media screen and (max-width:750px){

@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="../Assets/CSS/LogReg.css">
 </head>
 <body>
-    <div class="continer-form">
+    <div class="continer-form register">
         <div class="informacion">
             <div class="txt_welcome">
                 <h2>Bienvenido</h2>
                 <p>Para unirte a nuestra comunidad por favor Inciar Sesion con tus Credenciales</p>
-                <input type="button" value="Iniciar Sesion">
+                <input id="log" type="button" value="Iniciar Sesion">
             </div>
         </div>
         <div class="form-login">
@@ -46,5 +46,39 @@
             </div>
         </div>
     </div>
+
+    <!--FORMULARIO DE LOGIN-->
+    <div class="continer-form login hide">
+        <div class="informacion">
+            <div class="txt_welcome">
+                <h2>Hola de Nuevo!!!</h2>
+                <p>No cuentas con cuenta aun. Registrate aqui!!</p>
+                <input id="reg" type="button" value="Registrarse">
+            </div>
+        </div>
+        <div class="form-login">
+            <div class="forms-childs">
+                <h2>Iniciar Sesión</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-microsoft'></i>
+                    <i class='bx bxl-linkedin'></i>
+                </div>
+                <p>O Inicia Sesión con tu correo</p>
+                <form class="formulario" id="login-form">
+                    <label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="text" placeholder="Correo Electronico" id="email">
+                    </label>
+                    <label>
+                        <i class='bx bxs-key'></i>
+                        <input type="text" placeholder="Contraseña" id="password">
+                    </label>
+                    <input type="submit" value="Iniciar Sesion">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../Assets/JS/script.js"></script>
 </body>
 </html>
