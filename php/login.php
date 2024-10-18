@@ -85,6 +85,7 @@
 </div>
 </div>
 
-    <script src="/Assets/JS/script.js"></script>
+<script src="/Assets/JS/script.js"></script>
+
 </body>
 </html>
