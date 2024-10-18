@@ -28,18 +28,18 @@
                     <i class='bx bxl-linkedin'></i>
                 </div>
                 <p>O usa tu email para registrarte</p>
-                <<form class="formulario">
+                <form class="formulario">
                     <label>
                         <i class='bx bx-user'></i>
-                        <input type="text" name="nombre" placeholder="Nombre Completo" required>
+                        <input type="text" placeholder="Nombre Completo">
                     </label>
                     <label>
                         <i class='bx bx-envelope'></i>
-                        <input type="text" name="correo" placeholder="Correo Electronico" required>
+                        <input type="text" placeholder="Correo Electronico">
                     </label>
                     <label>
                         <i class='bx bxs-key'></i>
-                        <input type="password" name="contraseña" placeholder="Contraseña" required>
+                        <input type="text" placeholder="Contraseña">
                     </label>
                     <input type="submit" value="Registrarse">
                     <div class="alerta-error">Todos los campos son obligatorios</div>
@@ -85,7 +85,7 @@
 </div>
 </div>
 
-<script src="/Assets/JS/script.js"></script>
+<script src="../Assets/JS/script.js"></script>
 
 </body>
 </html>
