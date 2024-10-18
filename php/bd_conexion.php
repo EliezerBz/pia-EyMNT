@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "127.0.0.1:3306";
 $username = "u473285458_soporte_root"; // El usuario correcto
 $password = "$.Cisco47*"; // La contraseña asociada al usuario
 $dbname = "u473285458_EcoIntercambio"; // El nombre exacto de la base de datos
