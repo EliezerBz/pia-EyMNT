@@ -37,25 +37,15 @@
                         <img src="../Assets/Img/credito.png" alt="Total de créditos">
                         <p>1000</p>
                     </div>
-                    <br>
-                    <br>
                     <button><img src="../Assets/Img/credito.png" alt="" width="30px"> Adquirir Créditos</button>
-                    <br>
-                    <br>
                 </div>
             </div>
-
+        
             <div class="profile-activity">
                 <div class="mi-actividad">
                     <h3>Mi Actividad</h3>
                     <div class="activity-contents">
-
-                        <div class="activity-box"></div>
-                        <div class="activity-box"></div>
-                        <div class="activity-box"></div>
-                        <div class="activity-box"></div>
-                        <div class="activity-box"></div>
-                        <div class="activity-box"></div>
+                        <!-- Generar dinamicamente las activity-box -->
                         <div class="activity-box"></div>
                         <div class="activity-box"></div>
                         <div class="activity-box"></div>
@@ -77,7 +67,35 @@
                     </div>
                 </div>
             </div>
+        
+            <div class="subir">
+                <div class="subir-intercambio">
+                    <h4>Subir Intercambio</h4>
+                    <img id="preview-img" src="" alt="imagenArticulo">
+                    <input type="file" id="upload-img" accept="image/*">
+                    <input type="text" size="15" placeholder="Nombre del artículo" name="nombre-articulo">
+                    <input type="text" size="15" placeholder="Descripción del artículo" name="descrip-articulo">
+                    <div class="potenciar-publicacion">
+                        <input type="checkbox" id="potenciar-checkbox" name="potenciar" value="150">
+                        <label for="potenciar-checkbox">Potenciar Publicación por 5 días por 150 créditos</label>
+                    </div>
+                    <button>Subir Intercambio</button>
+                </div>
+                <div class="subir-intercambio">
+                    <h4>Subir Venta</h4>
+                    <img id="preview-img" src="" alt="imagenArticulo">
+                    <input type="file" id="upload-img" accept="image/*">
+                    <input type="text" size="15" placeholder="Nombre del artículo" name="nombre-articulo">
+                    <input type="text" size="15" placeholder="Descripción del artículo" name="descrip-articulo">
+                    <div class="potenciar-publicacion">
+                        <input type="checkbox" id="potenciar-checkbox" name="potenciar" value="150">
+                        <label for="potenciar-checkbox">Potenciar Publicación por 5 días por 150 créditos</label>
+                    </div>
+                    <button>Subir Venta</button>
+                </div>
+            </div>
         </div>
+        
     </main>
 
     <footer>
@@ -115,19 +133,7 @@
         </div>
     </footer>
 
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
+    <script src="../Assets/JS/profileScript.js"></script>
 
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('open');
-            menuToggle.classList.toggle('open');
-            if (menuToggle.classList.contains('open')) {
-                menuToggle.innerHTML = '&times;';
-            } else {
-                menuToggle.innerHTML = '&#9776;';
-            }
-        });
-    </script>
 </body>
 </html>

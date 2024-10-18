@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; /* Evita el scroll horizontal (desbordamiento) */
+    overflow-x: hidden;
     box-sizing: border-box;
 }
 
@@ -82,21 +82,28 @@ main {
 .contenedor-principal {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px; /* Aumentamos el ancho máximo */
     margin: 0 auto; 
     padding: 0 15px;
+    gap: 30px; /* Mayor separación entre elementos */
 }
 
-.profile-data, .profile-activity {
+.profile-data, .profile-activity, .subir {
+    flex: 1;
+    min-width: 350px;
+    max-width: 450px; /* Mayor ancho */
     background-color: white;
     border-radius: 20px;
-    padding: 20px;
+    padding: 30px; /* Mayor espacio interno */
     margin: 10px;
-    width: 100%;
-    max-width: 400px; /* Limita el tamaño en pantallas grandes */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    height: auto; /* Evitar que se estiren de largo */
+}
+
+.profile-activity, .subir {
+    flex: 2; /* Se ajusta a un mayor ancho en pantallas grandes */
 }
 
 img {
@@ -114,8 +121,8 @@ img {
 
 .profile-info img {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
 }
 
 .profile-info h4 {
@@ -130,36 +137,101 @@ img {
 
 .credit-in-data {
     display: flex;
-    flex-direction: column; /* Alinea los elementos dentro de credit-in-data en columna */
+    flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
 
 .totalcredits {
     display: flex;
-    align-items: center; /* Centra verticalmente la imagen y el texto */
+    align-items: center;
     justify-content: center;
-    margin-bottom: 10px; /* Añadimos un margen inferior para separar del botón */
+    margin-bottom: 10px;
 }
 
 .totalcredits img {
     width: 40px;
     height: 40px;
-    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    margin-right: 10px;
 }
 
 .totalcredits p {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    margin: 0; /* Elimina márgenes extra del párrafo */
+    margin: 0;
 }
 
-/* Botón centrado */
+.subir-intercambio {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.subir-intercambio h4 {
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.subir-intercambio img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #dcdcdc;
+    border-radius: 10px;
+    object-fit: cover;
+    display: none; /* Ocultar imagen inicialmente */
+}
+
+.subir-intercambio input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.subir-intercambio input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+    font-size: 14px;
+}
+
+.subir-intercambio input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.subir-intercambio button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subir-intercambio button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.subir-intercambio button:active {
+    background-color: #3e8e41;
+    transform: translateY(0);
+}
+
 button {
     background-color: #ffe680;
     border: none;
-    padding: 20px 30px;
+    padding: 15px 25px; /* Tamaño ajustado */
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
@@ -169,7 +241,7 @@ button {
 }
 
 button img {
-    margin-right: 10px; /* Espacio entre el ícono de la imagen y el texto del botón */
+    margin-right: 10px;
 }
 
 button:hover {
@@ -184,15 +256,14 @@ button:hover {
 .activity-contents {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    justify-content: space-between;
 }
 
 .activity-box {
-    width: calc(30% - 20px);
+    width: 48%;
     height: 80px;
     background-color: #ebebeb;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 10px;
 }
 
@@ -216,6 +287,86 @@ button:hover {
     font-size: 20px;
     color: #ffcc00;
     font-weight: bold;
+}
+
+.subir {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subir-intercambio, .subir-venta {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subir-intercambio img, .subir-venta img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #dcdcdc;
+    border-radius: 10px;
+    object-fit: cover;
+    display: none;
+}
+
+.subir-intercambio input[type="file"], .subir-venta input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.subir-intercambio input[type="text"], .subir-venta input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+    font-size: 14px;
+}
+
+.subir-intercambio input[type="text"]:focus, .subir-venta input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.subir-intercambio button, .subir-venta button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.subir-intercambio button:hover, .subir-venta button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.subir-intercambio button:active, .subir-venta button:active {
+    background-color: #3e8e41;
+    transform: translateY(0);
+}
+
+.potenciar-publicacion {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.potenciar-publicacion input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.potenciar-publicacion label {
+    font-size: 14px;
+    color: #333;
 }
 
 /* Estilos del footer */
@@ -373,3 +524,102 @@ footer {
         align-items: center;
     }
 }
+
+@media only screen and (max-width: 430px) {
+    /* Ajustes para el header */
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logoytitulo img {
+        height: 40px;
+    }
+
+    .logoytitulo h4 {
+        font-size: 16px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        background-color: #16a085;
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+        padding: 10px 0;
+        border-bottom: 1px solid #1abc9c;
+    }
+
+    /* Ajustes para el contenedor principal */
+    .contenedor-principal {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .profile-data, .profile-activity, .subir {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .profile-info img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-info h4 {
+        font-size: 18px;
+    }
+
+    .profile-info p {
+        font-size: 14px;
+    }
+
+    .totalcredits p {
+        font-size: 20px;
+    }
+
+    /* Ajustes para las actividades */
+    .activity-box {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .creditos-obtenidos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajustes para la sección de subida */
+    .subir-intercambio, .subir-venta {
+        padding: 15px;
+    }
+
+    .subir-intercambio input[type="text"], .subir-venta input[type="text"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Ajustes para botones */
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    /* Ajustes para el footer */
+    footer {
+        padding: 20px 0;
+    }
+
+    .footer-section h4 {
+        font-size: 16px;
+    }
+
+    .footer-section ul li a {
+        font-size: 14px;
+    }
+}
+
