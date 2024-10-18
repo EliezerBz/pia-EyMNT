@@ -22,6 +22,9 @@
         <div class="form-login">
             <div class="forms-childs">
                 <h2>Crear Cuenta</h2>
+                <?php
+                include("bd_conexion.php");
+                ?>
                 <div class="icons">
                     <i class='bx bxl-google'></i>
                     <i class='bx bxl-microsoft'></i>
