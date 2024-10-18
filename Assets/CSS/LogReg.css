@@ -46,7 +46,7 @@ body{
   margin: 15px 0;
 }
 
-#lk1519{
+.txt_welcome input{
   background-color: transparent;
   outline: none;
   border: solid 2px #9191bd;
@@ -57,7 +57,7 @@ body{
   transition: background-color .3 ease;
 }
 
-#lk1519:hover{
+.txt_welcome input:hover{
   background-color: #9191bd;
   border: none;
   color: #fff;
@@ -144,6 +144,39 @@ body{
   box-shadow:  0 2px 5px rgba(0,0,0,-1);
 }
 
-formulario input[type=submit]:hover{
+.formulario input[type=submit]:hover{
   background-color: #a7a7a7;
+}
+
+/*SECCION DE RESPONSIVE*/
+
+@media screen and (max-width:750px){
+  html{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width:580px){
+  html{
+    font-size: 10px;
+  }
+  .continer-form{
+    flex-direction: column;
+    height: auto;
+  }
+
+  .informacion{
+    width: 100%;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .form-login{
+    width: 100%;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+  }
 }
