@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             containerFormRegister.classList.remove("hide");
         });
     } else {
-        console.error("Los elementos sign-in o sign-up no se encontraron.");
+        console.error("Los elementos sign-in o sign-up no se encontraron xd.");
     }
 });
 
