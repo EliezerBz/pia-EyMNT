@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -16,7 +16,7 @@
             <div class="txt_welcome">
                 <h2>Bienvenido</h2>
                 <p>Para unirte a nuestra comunidad por favor Inciar Sesion con tus Credenciales</p>
-                <input id="log" type="button" value="Iniciar Sesion">
+                <input type="button" value="Iniciar Sesión" id="sign-in">
             </div>
         </div>
         <div class="form-login">
@@ -42,6 +42,8 @@
                         <input type="text" placeholder="Contraseña">
                     </label>
                     <input type="submit" value="Registrarse">
+                    <div class="alerta-error">Todos los campos son obligatorios</div>
+                    <div class="alerta-exito">Te registraste correctamente</div>
                 </form>
             </div>
         </div>
@@ -49,36 +51,40 @@
 
     <!--FORMULARIO DE LOGIN-->
     <div class="continer-form login hide">
-        <div class="informacion">
-            <div class="txt_welcome">
-                <h2>Hola de Nuevo!!!</h2>
-                <p>No cuentas con cuenta aun. Registrate aqui!!</p>
-                <input id="reg" type="button" value="Registrarse">
-            </div>
-        </div>
-        <div class="form-login">
-            <div class="forms-childs">
-                <h2>Iniciar Sesión</h2>
-                <div class="icons">
-                    <i class='bx bxl-google'></i>
-                    <i class='bx bxl-microsoft'></i>
-                    <i class='bx bxl-linkedin'></i>
-                </div>
-                <p>O Inicia Sesión con tu correo</p>
-                <form method="post" class="formulario" id="login-form">
-                    <label>
-                        <i class='bx bx-envelope'></i>
-                        <input type="text" name="correo" placeholder="Correo Electronico" id="email">
-                    </label>
-                    <label>
-                        <i class='bx bxs-key'></i>
-                        <input type="password" name="password" placeholder="Contraseña" id="password">
-                    </label>
-                    <input type="submit" value="Iniciar Sesion">
-                </form>
-            </div>
+    <div class="informacion">
+        <div class="txt_welcome">
+            <h2>Hola de Nuevo!!!</h2>
+            <p>No cuentas con cuenta aun. Registrate aqui!!</p>
+            <input type="button" value="Registrarse" id="sign-up">
         </div>
     </div>
-    <script src="../Assets/JS/script.js"></script>
+    <div class="form-login">
+        <div class="forms-childs">
+            <h2>Iniciar Sesión</h2>
+            <div class="icons">
+                <i class='bx bxl-google'></i>
+                <i class='bx bxl-microsoft'></i>
+                <i class='bx bxl-linkedin'></i>
+            </div>
+            <p>O Inicia Sesión con tu correo</p>
+            <form method="post" action="controlador.php" class="formulario" id="login-form">
+                <label>
+                    <i class='bx bx-envelope'></i>
+                    <input type="text" name="correo" placeholder="Correo Electronico" id="email" required>
+                </label>
+                <label>
+                    <i class='bx bxs-key'></i>
+                    <input type="password" name="password" placeholder="Contraseña" id="password" required>
+                </label>
+                <input type="submit" name="btningresar" value="Iniciar Sesión">
+                <div class="alerta-error">Todos los campos son obligatorios</div>
+                <div class="alerta-exito">Te registraste correctamente</div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+    <script src="/Assets/js/script.js"></script>
 </body>
 </html>
