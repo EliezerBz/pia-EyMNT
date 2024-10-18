@@ -9,8 +9,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 30px;
-    background-color: aliceblue;
+    padding: 20px;
+    background-color: #16a085;
     position: relative;
 }
 

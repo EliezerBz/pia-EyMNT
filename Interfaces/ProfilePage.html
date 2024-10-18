@@ -1,13 +1,12 @@
-<!DOCTYPE html> 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es"> <!-- Cambiado 'en' por 'es' para indicar que el idioma es español -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecointercambios</title>
-    <link rel="stylesheet" href="../Assets/CSS/StylePrincipal.css">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="../Assets/CSS/StyleActivity.css">
 </head>
 <body>
-
     <header>
         <button class="menu-toggle" aria-label="Abrir menú">
             &#9776;
@@ -17,45 +16,62 @@
             <h4>Ecointercambios</h4>
         </a>
         <nav class="nav-menu">
-            <a href="">Donaciones</a>
-            <a href="">Intercambios</a>
-            <a href="">Compra / Venta</a>
+            <a href="#">Donaciones</a>
+            <a href="#">Intercambios</a>
+            <a href="#">Compra / Venta</a>
             <a href="ProfilePage.html">Perfil</a>
         </nav>
     </header>
 
     <main>
-        <h2>Explora categorías para intercambiar</h2>
-
-        <div class="container-padre">
-            <div class="container-gen">
-                <h3>Electrónica</h3>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvQk6XOjULg-bVbrOMiHxMdIQ2Ch1pXgnbYA&s" alt="Electrónica">
-                <button>Ver Artículos</button>
+        <div class="contenedor-principal">
+            <div class="profile-data">
+                <div class="profile-info">
+                    <img src="../Assets/Img/profileimg.png" alt="Imagen de perfil">
+                    <h4>Eliezer Bustillos Zamora</h4>
+                    <p><strong>Correo Electrónico:</strong> eliezerzamora18@hotmail.com</p>
+                    <p><strong>Número de Teléfono:</strong> +52 8112111168</p>
+                </div>
+                <div class="credit-in-data">
+                    <div class="totalcredits">
+                        <img src="../Assets/Img/credito.png" alt="Total de créditos">
+                        <p>1000</p>
+                    </div>
+                    <br>
+                    <br>
+                    <button><img src="../Assets/Img/credito.png" alt="" width="30px"> Adquirir Créditos</button>
+                    <br>
+                    <br>
+                </div>
             </div>
 
-            <div class="container-gen">
-                <h3>Juguetes</h3>
-                <img src="https://http2.mlstatic.com/D_NQ_NP_770491-MLM46221364790_052021-O.webp" alt="Juguetes">
-                <button>Ver Artículos</button>
-            </div>
+            <div class="profile-activity">
+                <div class="mi-actividad">
+                    <h3>Mi Actividad</h3>
+                    <div class="activity-contents">
 
-            <div class="container-gen">
-                <h3>Ropa</h3>
-                <img src="https://theonesupplements.com/wp-content/uploads/2022/08/NP.png" alt="Ropa">
-                <button>Ver Artículos</button>
-            </div>
-
-            <div class="container-gen">
-                <h3>Electrodomésticos</h3>
-                <img src="https://bomssa.com/cdn/shop/products/Disenosintitulo_68.png?crop=center&height=1080&v=1644361994&width=1080" alt="Electrodomésticos">
-                <button>Ver Artículos</button>
-            </div>
-
-            <div class="container-gen">
-                <h3>Aire Libre</h3>
-                <img src="https://cantia.com.mx/cdn/shop/products/A15004.png?v=1661899383" alt="Aire Libre">
-                <button>Ver Artículos</button>
+                        <div class="activity-box"></div>
+                        <div class="activity-box"></div>
+                        <div class="activity-box"></div>
+                        <div class="activity-box"></div>
+                        <div class="activity-box"></div>
+                        <div class="activity-box"></div>
+                        <div class="activity-box"></div>
+                        <div class="activity-box"></div>
+                        <div class="activity-box"></div>
+                        <div class="activity-box"></div>
+                    </div>
+                    <div class="creditos-obtenidos">
+                        <div class="total-donaciones">
+                            <p>Total de Donaciones</p>
+                            <span>05</span>
+                        </div>
+                        <div class="total-intercambios">
+                            <p>Total de Intercambios</p>
+                            <span>10</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -66,7 +82,6 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/10710/10710939.png" alt="Logo Oficial" class="footer-logo">
                 <h3>Plataforma de Donaciones, Intercambio y Ventas.</h3>
             </div>
-    
             <div class="footer-section">
                 <h4>Enlaces</h4>
                 <ul>
@@ -76,14 +91,12 @@
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </div>
-    
             <div class="footer-section">
                 <h4>Sobre Nosotros</h4>
                 <ul>
                     <li><a href="#">Misión y Visión</a></li>
                 </ul>
             </div>
-    
             <div class="footer-section">
                 <h4>Síguenos en</h4>
                 <div class="social-links">
@@ -101,10 +114,10 @@
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
-    
+
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('open');
-            menuToggle.classList.toggle('open'); 
+            menuToggle.classList.toggle('open');
             if (menuToggle.classList.contains('open')) {
                 menuToggle.innerHTML = '&times;';
             } else {
@@ -112,6 +125,5 @@
             }
         });
     </script>
-
 </body>
 </html>
