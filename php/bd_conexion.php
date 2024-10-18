@@ -9,6 +9,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar la conexión
 if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+    // Si hay un error, enviar el mensaje de error a la consola del navegador usando JavaScript
+    echo "<script>console.log('Conexión fallida: " . addslashes($conn->connect_error) . "');</script>";
+} else {
+    // Si la conexión es exitosa
+    echo "<script>console.log('Conexión exitosa');</script>";
 }
 ?>
