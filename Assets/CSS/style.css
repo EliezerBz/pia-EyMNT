@@ -1,138 +1,150 @@
-/*Contenido Principal*/
-.containerPadre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #28a745;
-    padding: 50px;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-}
-.containerInfo {
-    flex: 1;
-    color: white;
-    padding: 20px;
-    text-align: center; /* Centra el texto */
-}
-
-.containerInfo h1 {
-    font-size: 40px; /* Ajustado para dispositivos pequeños */
-    margin-bottom: 20px;
-}
-
-.containerImg {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.containerImg img {
-    width: 150px; /* Ajustado para dispositivos pequeños */
-}
-
-.containerPadre2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #28a745;
-    padding: 50px;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-}
-/*Fin Contenido Principal*/
-
-body, html {
-    height: 100%;
-    margin: 0;
+* {
     padding: 0;
-    font-family: sans-serif;
-}
-
-header {
-    display: flex;
-    width: 100%;
-    min-height: 70px;
-    background-color: aliceblue;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px; 
+    margin: 0;
     box-sizing: border-box;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-}
-
-a {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #16a085;
+    position: relative;
+  }
+  
+  a {
     text-decoration: none;
     color: black;
-}
-
-.logoytitulo {
+  }
+  
+  .logoytitulo {
     display: flex;
     align-items: center;
-}
-
-.logoytitulo img {
+  }
+  
+  .logoytitulo img {
     height: 50px;
     margin-right: 10px;
-}
-
-nav {
-    display: flex;
+  }
+  
+  nav {
+    display: flex; /* Mostrar el menú en pantallas grandes */
     align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-}
-
-nav a {
+  }
+  
+  a {
+    text-decoration: none;
+    color: white; /* Cambié el color de los enlaces a blanco */
+  }
+  
+  nav a {
     font-weight: 600;
     padding-right: 15px;
-}
-
-nav a:hover {
-    color: blue;
-}
-
-main{
-    min-height: 70vh;
+    color: rgb(0, 0, 0); /* Color negro en el menú */
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #16a085; /* Cambio de color al pasar el ratón */
+  }
+  
+  .container-padre {
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    padding: 20px; 
-    box-sizing: border-box; 
-}
-
-h2 {
-    text-align: center;
-    max-width: 800px;
-    margin: 20px 0; 
-}
-
-#btn-login {
-    text-align: center;
-}
-
-#btn-iniciarSesion{
-    padding: 15px;
-    background-color: #4CAF50;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+    background-image: url(/Assets/Img/index_fondo.jpeg);
+    text-align: center; /* Centrar el texto horizontalmente */
+    padding: 0 20px; /* Asegúrate de que el contenido no esté pegado a los bordes */
+  }
+  
+  .titulo-container {
+    padding: 30px;
+  }
+  
+  .titulo-container h1 {
+    color: #fff;
+    margin: 0 0 10px;
+    font-size: 55px;
+  }
+  
+  .txt-container p {
+    font-size: 15px;
+    margin: 0 0 50px 0; /* Eliminar margen lateral grande */
+    color: #fff;
+  }
+  
+  .btn-container {
+    padding: 30px;
+  }
+  
+  .btn-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-}
-
-#btn-login button {
-    padding: 15px 30px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-#btn-login button:hover {
-    background-color: #45a049; 
-}
-
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-container button:hover {
+    background-color: #0056b3;
+  }
+  .container-padre2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    position: relative; /* Asegura que los elementos dentro de esta sección no se superpongan */
+    z-index: 1; /* Prioriza esta sección sobre otras en caso de que haya superposición */
+  }
+  .quienes{
+    margin: 60px;
+  }
+  .container-hijo2 {
+    max-width: 800px; /* Limita el ancho del contenido */
+    margin: 0 auto; /* Asegura que el contenedor esté centrado */
+  }
+  
+  .titulo-container2 h1 {
+    text-align: center;
+    color: #16a085; /* Color primario */
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  .txt-container2 p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6; /* Mejora la legibilidad con más espacio entre líneas */
+    margin: 0 auto;
+    max-width: 800px; /* Limita el ancho del texto */
+    text-align: center; /* Asegura que el texto esté centrado */
+  }
+  
+  @media (max-width: 768px) {
+    .container-padre2 {
+      padding: 30px 15px;
+    }
+  
+    .titulo-container2 h1 {
+      font-size: 32px;
+    }
+  
+    .txt-container2 p {
+      font-size: 16px;
+    }
+  }
+/*PIE DE PAGINA*/
 footer {
     background-color: #2c3e50; 
     color: #ecf0f1; 
@@ -147,7 +159,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    flex-wrap: wrap;
 }
 
 .footer-section {
@@ -217,54 +229,4 @@ footer {
 .footer-bottom p {
     margin: 0;
     font-size: 0.9em;
-}
-
-/* Media Queries */
-@media (max-width: 700px) {
-    header {
-        flex-direction: column;
-        align-items: center; /* Centra los elementos del header */
-    }
-
-    nav {
-        padding: 10px 0;
-    }
-
-    .principal {
-        padding: 10px; 
-    }
-
-    #btn-login button {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .containerPadre,
-    .containerPadre2 {
-        flex-direction: column;
-        padding: 20px; /* Reduce el padding en pantallas pequeñas */
-    }
-
-    .containerInfo h1 {
-        font-size: 30px; /* Tamaño de fuente más pequeño para h1 */
-    }
-
-    .containerImg img {
-        width: 100px; /* Ajustado para dispositivos pequeños */
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-section {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .logo-section {
-        align-items: center;
-    }
-
 }

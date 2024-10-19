@@ -5,7 +5,7 @@ if (!empty($_POST["btningresar"])) {
     if (empty($_POST["correo"]) || empty($_POST["password"])) {
         echo "<script>
             alert('Todos los campos son obligatorios');
-            window.location.href = 'login.php'; // Redirige de nuevo al login si hay campos vacíos
+            //window.location.href = 'login.php'; // Redirige de nuevo al login si hay campos vacíos
         </script>";
     } else {
         $correo = trim($_POST["correo"]);

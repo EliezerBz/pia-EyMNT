@@ -16,7 +16,7 @@
             <div class="txt_welcome">
                 <h2>Bienvenido</h2>
                 <p>Para unirte a nuestra comunidad por favor Inciar Sesión con tus Credenciales</p>
-                <input type="button" value="Iniciar Sesión" id="log"> <!-- Cambiado aquí -->
+                <input type="button" value="Iniciar Sesión" id="sign-in">
             </div>
         </div>
         <div class="form-login">
@@ -28,22 +28,24 @@
                     <i class='bx bxl-linkedin'></i>
                 </div>
                 <p>O usa tu email para registrarte</p>
-                <form class="formulario">
+                <form class="formulario" method="post" action="controlador_reg.php">
                     <label>
                         <i class='bx bx-user'></i>
-                        <input type="text" placeholder="Nombre Completo">
+                        <input type="text" placeholder="Nombre Completo" name="regusrname">
                     </label>
                     <label>
                         <i class='bx bx-envelope'></i>
-                        <input type="text" placeholder="Correo Electronico">
+                        <input type="text" placeholder="Correo Electronico" name="regcorreo">
                     </label>
                     <label>
                         <i class='bx bxs-key'></i>
-                        <input type="text" placeholder="Contraseña">
+                        <input type="password" placeholder="Contraseña" name="regcontraseña">
                     </label>
-                    <input type="submit" value="Registrarse">
-                    <div class="alerta-error">Todos los campos son obligatorios</div>
-                    <div class="alerta-exito">Te registraste correctamente</div>
+                    <label>
+                        <i class='bx bxs-key'></i>
+                        <input type="password" placeholder="Confirmar Contraseña" name="regconfcontraseña">
+                    </label>
+                    <input type="submit" value="Registrarse" name="btnregistrar">
                 </form>
             </div>
         </div>
@@ -55,7 +57,7 @@
             <div class="txt_welcome">
                 <h2>Hola de Nuevo!!!</h2>
                 <p>No cuentas con cuenta aun. Registrate aqui!!</p>
-                <input type="button" value="Registrarse" id="reg"> <!-- Cambiado aquí -->
+                <input type="button" value="Registrarse" id="sign-up">
             </div>
         </div>
         <div class="form-login">
@@ -77,13 +79,10 @@
                         <input type="password" name="password" placeholder="Contraseña" id="password" required>
                     </label>
                     <input type="submit" name="btningresar" value="Iniciar Sesión">
-                    <div class="alerta-error">Todos los campos son obligatorios</div>
-                    <div class="alerta-exito">Te registraste correctamente</div>
                 </form>
             </div>
         </div>
     </div>
-
-    <script src="../Assets/JS/script.js"></script>
+    <script src="/Assets/js/script.js"></script>
 </body>
 </html>
