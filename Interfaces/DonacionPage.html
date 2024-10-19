@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecointercambios</title>
-    <link rel="stylesheet" href="../Assets/CSS/StylePrincipal.css">
+    <link rel="stylesheet" href="../Assets/CSS/StyleDonacion.css">
 </head>
 <body>
 
@@ -17,8 +17,8 @@
             <h4>Ecointercambios</h4>
         </a>
         <nav class="nav-menu">
-            <a href="">Donaciones</a>
-            <a href="">Intercambios</a>
+            <a href="DonacionPage.html">Donaciones</a>
+            <a href="IntercambioPage.html">Intercambios</a>
             <a href="">Compra / Venta</a>
             <a href="ProfilePage.html">Perfil</a>
         </nav>
@@ -26,27 +26,40 @@
 
     <main>
 
-
-        <div class="container-padre">
-            <div class="container-gen">
-                <h3>Donaciones</h3>
-                <img src="https://cdn-icons-png.flaticon.com/512/10195/10195216.png" alt="Electrónica">
-                <button>Ver Artículos</button>
+        <div class="donar-articulos">
+    
+            <h3>Donar Articulo</h3>
+    
+            <div class="create-donacion">
+    
+                <div class="upload-img">
+                    <label for="upload-img">
+                        <img src="icono-nube.png" alt="Subir Imagen" width="50px">
+                        <p>Subir Archivo .PNG .JPG <br> Max 50MB</p>
+                    </label>
+                    <input type="file" id="upload-img" accept="image/*">
+                </div>
+    
+                <div class="data-donation">
+                    <input type="text" size="15" placeholder="Nombre del artículo" name="nombre-articulo">
+                    <input type="text" size="15" placeholder="Descripcion del artículo" name="descripcion-articulo">
+    
+                    <select name="categorias">
+                        <option>Categoria1</option>
+                        <option>Categoria2</option>
+                        <option>Categoria3</option>
+                    </select>
+    
+                    <input type="text" size="15" placeholder="Direccion de recoleccion" name="direccion-recoleccion">
+                    <input type="text" size="15" placeholder="Telefono de Contacto" name="Telefono-Contacto">
+                    
+                    <button type="submit">Solicitar Recolección</button>
+                </div>
+    
             </div>
-
-            <div class="container-gen">
-                <h3>Intercambio</h3>
-                <img src="https://cdn-icons-png.flaticon.com/512/7544/7544943.png" alt="Juguetes">
-                <button>Ver Artículos</button>
-            </div>
-
-            <div class="container-gen">
-                <h3>Compras</h3>
-                <img src="https://cdn-icons-png.flaticon.com/512/8730/8730692.png" alt="Ropa">
-                <button>Ver Artículos</button>
-            </div>  
+    
         </div>
-
+    
     </main>
 
     <footer>
