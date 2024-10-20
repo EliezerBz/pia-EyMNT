@@ -1,16 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const btnlogin = document.getElementById("log"),
-          btnregister = document.getElementById("reg"),
-          containerFormRegister = document.querySelector(".register"),
-          containerFormLogin = document.querySelector(".login");
+const btnSignIn = document.getElementById("sign-in"),
+      btnSignUp = document.getElementById("sign-up"),
+      containerFormRegister = document.querySelector(".register"),
+      containerFormLogin = document.querySelector(".login");
 
-    btnlogin.addEventListener("click", e => {
-        containerFormRegister.classList.add("hide");
-        containerFormLogin.classList.remove("hide");
-    });
+btnSignIn.addEventListener("click", e => {
+    containerFormRegister.classList.add("hide");
+    containerFormLogin.classList.remove("hide")
+})
 
-    btnregister.addEventListener("click", e => {
-        containerFormLogin.classList.add("hide");
-        containerFormRegister.classList.remove("hide");
-    });
-});
+
+btnSignUp.addEventListener("click", e => {
+    containerFormLogin.classList.add("hide");
+    containerFormRegister.classList.remove("hide")
+})
