@@ -15,7 +15,7 @@
         <div class="informacion">
             <div class="txt_welcome">
                 <h2>Bienvenido</h2>
-                <p>Para unirte a nuestra comunidad por favor Inciar Sesión con tus Credenciales</p>
+                <p>Para unirte a la beta cerrada, con tus credenciales</p>
                 <input type="button" value="Iniciar Sesión" id="sign-in">
             </div>
         </div>
@@ -56,7 +56,7 @@
         <div class="informacion">
             <div class="txt_welcome">
                 <h2>Hola de Nuevo!!!</h2>
-                <p>No cuentas con cuenta aun. Registrate aqui!!</p>
+                <p>No cuentas con cuenta aun. Registrate a la beta aqui!!</p>
                 <input type="button" value="Registrarse" id="sign-up">
             </div>
         </div>
