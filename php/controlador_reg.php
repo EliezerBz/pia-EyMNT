@@ -10,7 +10,7 @@ if(!empty($_POST["btnregistrar"])){
         $nombre=$_POST["regusrname"];
         $correo=$_POST["regcorreo"];
         $contraseña=$_POST["regcontraseña"];
-        $sql=$conn->query("INSERT INTO Usuario(Nombre,Correo,Contraseña) Values('$nombre','$correo','$contraseña' )");
+        $sql=$conn->query("INSERT INTO usuarios(nombre,correo,contraseña) Values('$nombre','$correo','$contraseña' )");
         if ($sql==1) {
             echo "<script>
             alert('Usuario Registrado con Exito.');
